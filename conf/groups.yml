@@ -48,18 +48,6 @@ Body:
     Commands:
       changedress: true
       resurrect: true
-    Permissions:
-      # without this basic permissions regular players could not trade or party
-      can_trade: true
-      can_party: true
-      attendance: true
-  - Id: 1
-    Name: Super Player
-    # Can do everything Players can and more
-    Inherit:
-      Player: true
-    Level: 0
-    Commands:
       # Informational commands
       commands: true
       charcommands: true
@@ -91,6 +79,18 @@ Body:
       breakguild: true
       channel: true
       langtype: true
+    Permissions:
+      # without this basic permissions regular players could not trade or party
+      can_trade: true
+      can_party: true
+      attendance: true
+  - Id: 1
+    Name: Super Player
+    # Can do everything Players can and more
+    Inherit:
+      Player: true
+    Level: 0
+    Commands:
     Permissions:
       attendance: false
   - Id: 2
@@ -224,6 +224,18 @@ Body:
       Support: true
       Law Enforcement: true
     LogCommands: true
+    Commands:
+      blvl: true
+      jlvl: true
+      jobchange: true
+      refine: true
+      str: true
+      agi: true
+      vit: true
+      int: true
+      dex: true
+      luk: true
+      glvl: true
     Permissions:
       can_trade: true
       can_party: true

@@ -912,6 +912,15 @@ void clif_dropflooritem( struct flooritem_data* fitem, bool canShowEffect ){
 				p.showdropeffect = 0;
 				p.dropeffectmode = DROPEFFECT_NONE;
 			}
+		} else if (p.type == IT_CARD) {
+			p.showdropeffect = 1;
+			p.dropeffectmode = DROPEFFECT_RED_PILLAR;
+		} else if (p.type == IT_ARMOR) {
+			p.showdropeffect = 1;
+			p.dropeffectmode = DROPEFFECT_PURPLE_PILLAR;
+		} else if (p.type == IT_WEAPON) {
+			p.showdropeffect = 1;
+			p.dropeffectmode = DROPEFFECT_GREEN_PILLAR;
 		} else {
 			p.showdropeffect = 0;
 			p.dropeffectmode = DROPEFFECT_NONE;

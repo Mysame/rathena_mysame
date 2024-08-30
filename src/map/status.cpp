@@ -10646,6 +10646,7 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 		case SC_CLAN_INFO:
 		case SC_DAILYSENDMAILCNT:
 		case SC_SOULATTACK:
+		case SC_PRESERVE:
 			tick = INFINITE_TICK;
 			break;
 
@@ -13220,6 +13221,8 @@ int status_change_clear(struct block_list* bl, int type)
 		if (type == 0) { // Type 0: PC killed
 			if (it.second->flag[SCF_NOREMOVEONDEAD]) {
 				switch (status) {
+					case SC_PRESERVE: // Keep preserve on death
+						break;
 					case SC_ELEMENTALCHANGE: // Only when its Holy or Dark that it doesn't dispell on death
 						if (sc->getSCE(status)->val2 != ELE_HOLY && sc->getSCE(status)->val2 != ELE_DARK)
 							break;

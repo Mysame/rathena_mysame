@@ -1242,6 +1242,11 @@ Body:
         Requires:
           - Name: RG_INTIMIDATE
             Level: 5
+      - Name: ST_PRESERVE
+        MaxLevel: 1
+        Requires:
+          - Name: RG_PLAGIARISM
+            Level: 10
       - Name: RG_CLOSECONFINE
         MaxLevel: 1
   - Job: Alchemist
@@ -2487,11 +2492,6 @@ Body:
         Requires:
           - Name: RG_STRIPWEAPON
             Level: 1
-      - Name: ST_PRESERVE
-        MaxLevel: 1
-        Requires:
-          - Name: RG_PLAGIARISM
-            Level: 10
       - Name: ST_FULLSTRIP
         MaxLevel: 5
         Requires:

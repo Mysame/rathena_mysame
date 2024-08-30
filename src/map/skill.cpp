@@ -7946,7 +7946,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case NJ_NEN:
 	case NPC_DEFENDER:
 	case NPC_MAGICMIRROR:
-	case ST_PRESERVE:
+	/*case ST_PRESERVE:*/
 	case NPC_KEEPING:
 	case NPC_WEAPONBRAKER:
 	case NPC_BARRIER:
@@ -8920,6 +8920,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 	case TK_READYTURN:
 	case TK_READYCOUNTER:
 	case TK_DODGE:
+	case ST_PRESERVE:
 	case CR_SHRINK:
 	case SG_FUSION:
 	case GS_GATLINGFEVER:
